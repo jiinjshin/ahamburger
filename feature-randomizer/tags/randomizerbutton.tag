@@ -16,9 +16,11 @@
 
     <style>
         :scope {
-            display: inline;
-            float: left;
+
+            display: flex;
+            justify-content: center;
         }
+
         h1 {
             font-family: 'Bangers', cursive;
             text-align: center;
