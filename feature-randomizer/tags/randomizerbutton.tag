@@ -4,13 +4,9 @@
         { name }
     </button>
 
-    <!-- <button type="button" class="drawButton" onclick={ "window.location.reload()" }>
-        { name }
-    </button> -->
-
-    <context class="card"></context>
-    <shape class="card"></shape>
-    <function class="card"></function>
+    <context>></context>
+    <shape></shape>
+    <function></function>
 
     <script>
         this.name = "Draw new cards"
@@ -20,6 +16,7 @@
 
     <style>
         :scope {
+
             display: flex;
             justify-content: center;
         }
@@ -33,7 +30,7 @@
         h2 {
             text-align: center;
         }
-        
+
         .drawButton {
             width: 250px;
             height: 100px;
@@ -43,7 +40,6 @@
             font-size: 25px;
             border: 2px dashed;
             background-color: white;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
         }
 
