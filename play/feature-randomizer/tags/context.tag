@@ -6,6 +6,7 @@
     </div>
 
     <script>
+      var that = this;
         this.name = "Context"
         var contextList = [
             "Include your significant other",
@@ -17,10 +18,14 @@
             "In a bar"
         ];
 
-        function chooseContext() {
+        this.parent.on('squeak', function(e){
+          that.chooseContext();
+        });
+
+        this.chooseContext = function() {
             return this.chosencontext = contextList[Math.floor(Math.random() * contextList.length)];
         };
-        chooseContext();
+        this.chooseContext();
     </script>
 
     <style>
@@ -29,7 +34,7 @@
             border-radius: 8px;
             font-family: 'Open Sans', sans-serif;
             width: 250px;
-            height: 150px;
+            height: 250px;
             padding: 20px;
             margin: 20px;
             background-color: #f63a19;

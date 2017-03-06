@@ -1,15 +1,16 @@
-<function>
+<func>
     <h1>
         { name }
     </h1>
     <h2>
-        { chosenfunction }
+        { chosenfunc }
     </h2>
 
     <script>
+        var that = this;
         this.name = "Function"
 
-        var functionList = [
+        var funcList = [
             "For understanding",
             "For eating",
             "For justice",
@@ -18,8 +19,15 @@
             "For community",
             "For longevity"
         ];
-        var item = functionList[Math.floor(Math.random() * functionList.length)];
-        this.chosenfunction = item;
+
+        this.parent.on('squeak', function(e){
+          that.chooseFunc();
+        });
+
+        this.chooseFunc = function() {
+            return this.chosenfunc = funcList[Math.floor(Math.random() * funcList.length)];
+        };
+        this.chooseFunc();
     </script>
 
     <style>
@@ -28,7 +36,7 @@
             border-radius: 8px;
             font-family: 'Open Sans', sans-serif;
             width: 250px;
-            height: 150px;
+            height: 250px;
             padding: 20px;
             margin: 20px;
             background-color: #89df8e;
@@ -37,4 +45,4 @@
 
     </style>
 
-</function>
+</func>

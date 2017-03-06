@@ -7,6 +7,7 @@
     </h2>
 
     <script>
+        var that = this;
         this.name = "Shape"
 
         var shapeList = [
@@ -19,8 +20,15 @@
             "Cylinder",
             "Line"
         ];
-        var item = shapeList[Math.floor(Math.random() * shapeList.length)];
-        this.chosenshape = item;
+
+        this.parent.on('squeak', function(e){
+          that.chooseShape();
+        });
+
+        this.chooseShape = function() {
+            return this.chosenshape = shapeList[Math.floor(Math.random() * shapeList.length)];
+        };
+        this.chooseShape();
     </script>
 
     <style>
@@ -29,7 +37,7 @@
             border-radius: 8px;
             font-family: 'Open Sans', sans-serif;
             width: 250px;
-            height: 150px;
+            height: 250px;
             padding: 20px;
             margin: 20px;
             background-color: #eaaf56;

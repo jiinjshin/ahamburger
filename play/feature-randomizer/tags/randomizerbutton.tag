@@ -1,17 +1,21 @@
 <randomizerbutton>
 
-    <button type="button" class="drawButton" onclick={ "window.location.reload()" }>
+    <button type="button" class="drawButton" onclick={ pickCards }>
         { name }
     </button>
 
     <context></context>
     <shape></shape>
-    <function></function>
+    <func></func>
 
     <script>
+
         this.name = "Draw new cards"
-        // this.pickCards = function() {     console.log('button clicked'); } get the list of cards... randomly pick a context, shape, and function card data
-        //
+        this.pickCards = function () {
+            console.log('button clicked');
+            this.trigger('squeak');
+        }
+
     </script>
 
     <style>
