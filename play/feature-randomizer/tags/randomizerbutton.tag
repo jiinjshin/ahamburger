@@ -4,9 +4,11 @@
         { name }
     </button>
 
-    <context></context>
     <shape></shape>
+    <context></context>
     <func></func>
+    <cheese></cheese>
+    <timer></timer>
 
     <script>
 
@@ -15,7 +17,6 @@
             console.log('button clicked');
             this.trigger('squeak');
         }
-
     </script>
 
     <style>
